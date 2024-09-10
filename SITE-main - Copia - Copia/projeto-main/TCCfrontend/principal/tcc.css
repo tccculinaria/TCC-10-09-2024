@@ -1,0 +1,228 @@
+
+* {
+margin: 0;
+padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+    
+a {
+color: #fff;
+text-decoration: none;
+transition: 0.3s;
+}
+    
+    
+.logo	{
+font-size: 24px;
+text-transform: uppercase;
+letter-spacing: 4px;
+}
+    
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-family: system-ui,
+-apple-system, helvetica, Arial,
+sans-serif;
+background: #23232e;
+height: 11vh;
+padding-right: 100%;
+position: fixed;
+
+}
+    
+.nav-list {
+list-style: none;
+display: flex;
+}
+    
+.nav-list li {
+letter-spacing: 3px;
+margin-left: 32px;
+}
+       
+/* começo do card-box */
+
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content-box {  
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(54, 54, 54, 0.692);
+    display: none;
+    width: 1600px;
+    height: 450px;
+    text-align: center;
+    margin-top: 120px;
+    padding-bottom: 10%;
+}
+
+.content-box:target {
+    display: inline-block;
+}
+
+.arrow {
+    padding: 10px;
+    font-size: 60px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: #3a3a3a;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e000;
+}
+
+
+
+.conteudo-texto {  
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    margin-top: 0px;
+    font-size: 30px;
+    }
+        
+    .conteudo-imagem {
+    border: #000;
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-right: 50px;
+    border: 1px solid  rgba(48, 48, 48, 0.692);    
+    border-radius: 15px;
+    transition: 0.5s;
+    }
+        
+    .conteudo-imagem:hover {
+        height: 210px;
+        box-shadow: 6px 6px 6px 4px rgba(0, 0, 0, 0.2);
+    }
+         
+   
+
+/* final do car-box */
+   
+
+/* começo do modo escuro */  
+
+/* Transição aplicada somente quando a classe transicao está presente */
+body.transicao.modo-claro, body.transicao.modo-escuro {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Desativa a transição por padrão */
+body {
+    transition: none;
+}
+
+  
+    
+.switch {
+font-size: 17px;
+position: relative;
+display: inline-block;
+width: 3.5em;
+height: 2em;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+--background: #28096b;
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: var(--background);
+transition: .5s;
+border-radius: 30px;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 1.4em;
+width: 1.4em;
+border-radius: 50%;
+left: 10%;
+bottom: 15%;
+box-shadow: inset 8px -4px 0px 0px #fff000;
+background: var(--background);
+transition: .5s;
+}
+
+input:checked + .slider {
+background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+transform: translateX(100%);
+box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+	  
+.modo-claro {
+background-color: #ffffff4b;
+color: #000000ef;
+}   
+
+.modo-escuro {
+background-color: #1b1919;
+color: #ffffff;               
+}
+
+/* fim do modo escuro */
+        
+
+
+
+/* responsividade ate 1325px vulgo os notebook da escola*/ 
+
+
+@media(max-width: 1325px) {
+
+nav {
+width: 1200px;
+}
+
+.conteudo {
+width: 1200px;
+margin-left: 25px;
+height: 120vh;
+}
+
+#image-none {
+display: none;
+}
+
+.conteudo-destaque1 {
+width: 540px;
+height: 280px;
+margin-left: 40px;
+}
+
+}
+
+

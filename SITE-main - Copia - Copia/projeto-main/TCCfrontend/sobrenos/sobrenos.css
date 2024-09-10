@@ -1,0 +1,187 @@
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+    a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    }
+    
+    a:hover {
+    opacity: 0.7;
+    }
+    
+    .logo	{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: system-ui,
+      -apple-system, helvetica, Arial,
+      sans-serif;
+      background: #23232e;
+      height: 11vh;
+      padding-right: 100%;
+      position: fixed;
+      margin-top: -100px;
+      
+    
+    }
+    
+    .nav-list {
+    list-style: none;
+    display: flex;
+    }
+    
+    .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    }
+    
+    
+    
+    .conteudo {
+    
+    background-color: rgba(54, 54, 54, 0.692);
+    margin-top: 10px;
+    height: 80vh;
+    border-radius: 25px;
+    width: 1450px;
+    margin-left: 225px;
+    margin-bottom: 125px;
+    margin-top: 90px;
+    }
+    
+    /** começo do modo escuro **/
+    
+/* Transição aplicada somente quando a classe transicao está presente */
+body.transicao.modo-claro, body.transicao.modo-escuro {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Desativa a transição por padrão */
+body {
+  transition: none;
+}
+ 
+    
+    /* The switch - the box around the slider */
+    .switch {
+        font-size: 17px;
+        position: relative;
+        display: inline-block;
+        width: 3.5em;
+        height: 2em;
+      }
+      
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      /* The slider */
+      .slider {
+        --background: #28096b;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--background);
+        transition: .5s;
+        border-radius: 30px;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 1.4em;
+        width: 1.4em;
+        border-radius: 50%;
+        left: 10%;
+        bottom: 15%;
+        box-shadow: inset 8px -4px 0px 0px #fff000;
+        background: var(--background);
+        transition: .5s;
+      }
+      
+      input:checked + .slider {
+        background-color: #522ba7;
+      }
+      
+      input:checked + .slider:before {
+        transform: translateX(100%);
+        box-shadow: inset 15px -4px 0px 15px #fff000;
+      }
+      
+    
+    
+    .modo-claro {
+     background-image: linear-gradient( #98FB98, 	#00FF7F);
+        color: #000;
+    }
+    
+    
+    .modo-escuro {
+        background-color: #000;
+                color: #fff;
+    
+                
+            }
+    
+            /** final do modo escuro **/
+    
+    .conteudo-titulo {  
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: system-ui,
+        -apple-system, helvetica, Arial,
+        sans-serif;
+       
+        height: 70px;
+    }
+    
+    .conteudo-texto {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: system-ui,
+        -apple-system, helvetica, Arial,
+        sans-serif;
+       
+     
+    }
+    
+    /* responsividade ate 1325px vulgo os notebook da escola*/ 
+
+
+    @media(max-width: 1325px) {
+
+        nav {
+          width: 1200px;      
+        }
+    
+        .conteudo {
+          width: 1200px;
+          margin-left: 25px;
+          height: 120vh;
+        }
+    }    
